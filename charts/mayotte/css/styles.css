@@ -1,0 +1,53 @@
+body {
+	font-family: arial;
+}
+
+.temperaturesChart {
+	height: 300px;
+}
+
+.pressionArterielle {
+	height: 300px;
+}
+
+.pulsations {
+	height: 300px;
+}
+
+.informations {
+    width: 250px;
+    display: none;
+    background-color: #e6e6e6;
+    border-radius: 5px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid gray;
+}
+
+.informations h2.heure {
+	text-align: center;
+	margin: 0;
+	padding: 0;
+
+	background-color: #ff9f40;
+	padding: 5px;
+}
+
+.informations .content {
+	padding:20px;
+}
+
+.temperature, .energie, .humeur, .pressionArterielle, .pulsations {
+	margin-bottom: 5px;
+}
+
+
+.temperature label, .energie label, .humeur label, .pressionArterielle label, .pulsations label {
+	width:165px;
+	display: inline-block;
+
+}
+
+.temperature .data, .energie .data, .humeur .data, .pressionArterielle .data, .pulsations .data {
+	font-weight: bold;
+}

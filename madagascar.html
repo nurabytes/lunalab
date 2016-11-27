@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-clearmin.min.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/roboto.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/material-design.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="charts/comoros/css/styles.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="charts/comoros/libs/Chart.min.js"></script>
+        <script type="text/javascript" src="charts/comoros/js/temperature.js"></script>
+        <script type="text/javascript">setTimeout(location.reload.bind(location), 900000);</script>
+        <!-- <script type="text/javascript" src="js/pressionArterielle.js"></script> -->
+        <!-- <script type="text/javascript" src="charts/js/pulsations.js"></script> -->
+        <title>LUNALAB</title>
+    </head>
+    <body class="cm-no-transition cm-1-navbar">
+        <div id="cm-menu">
+            <nav class="cm-navbar cm-navbar-primary">
+                <div class="cm-flex"><a href="dashboard.html" class="cm-log"></a></div>
+                <div class="btn btn-primary md-menu-white" data-toggle="cm-menu"></div>
+            </nav>
+            <div id="cm-menu-content">
+                <div id="cm-menu-items-wrapper">
+                    <div id="cm-menu-scroller">
+                        <ul class="cm-menu-items">
+                            <li><a href="dashboard.html" class="md-home">Home</a></li>
+                            <li class="cm-submenu">
+                                <a class="md-person">Astronauts</a>
+                                     <li><a href="maurice.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABrElEQVRoQ+2bwUrDQBRF76sgiqALC678j35B240LpUlasFiNtp/juoKl0IKJUQuu9A/6BW7dWjQbwbqyTxopFEmQyXK8swokE7gnZ95kYEaw1GKnUxXMOgotAbIDQJbvW3itgE4EMlYUuttR92GRMQn+3GqtbX6s9gH1LAxvEEnCKTaOd6PzzwTMW609ENFDgzdY+6iqDIs3F02Ja+0yRB+tTZonmEpFYqd9C+hBnv4W9xlJ7Jy9AihaHDJHNH2Zg9EcPW3vMiOYjE9MMARjNvppDI0xNKZSDzkrpTATgkk3iWCyagyNoTFG1ZdDiUPJSBjQGBpDY8wI0BgzXqwxWcZMn1pcK6WtlQgm48+XYAjGqPoKjaExNMaIAKdrM1ysMTSGxpgRoDFmvMQLfK6V0tZKBJPxg0cwBGNUZFhjsmYlL/C5B+8XHFHE4oand6K6b+SZ5Q+ryEi84KQMCPf5Ln1slUI12Rlev/IHKuDO8PnhCcUwaFw2EzDOtbO+8rXVV1HX8lHyV7xoVng/itzo5yzBormhvycKH0AJwPz0yX9oEwBjUe0Fjd79IvA3Q5C0KPG4+sIAAAAASUVORK5CYII=" style="width:32px;">&nbsp&nbsp&nbsp&nbspMaurice</a></li>
+                                    <li><a href="reunion.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABlElEQVRoQ+3bv07CUBTH8d/BQYluYpx8D0cXWxYHTZCS+DcODj6MM5oIiQ6WKiRO+gY8isS4OACLHENDSUUlnFiGm/yYCFxK7iffnulWkHr5lUYRAz2HYBPAOgBJf29936ztWn8y8/r+0cXMa6csVEA7AmkrctXVqPqcrI03vnVSW1rs5+uAlLP4t+QaDsBMbFfCLpZPN6LLXgzjBeGtAAdZogyv5R4MoCp3hYerQ9ku33s5kZesUVyFiR1UfPGDxiOge4T5JtASPwjfABQIkxbQ1yGMzgPF6VsJGBDmjyoIQxjbwGAxLIbF2ARYjM2LM4bFsBibAIuxeXHGsBgWYxNgMTYvzhgWw2JsAizG5sUZw2JYjE2Axdi8OGNYDIuxCbAYmxdnDIthMTYBFmPz4oxhMSzGJjClGJ7B+4Gj7+IFYVOAuRzhdvGc78ioxXO+v91KgiJPhk/AjE+GDz8vlRr5jwWtA9jPZHKNLuLcrSSIurpyPH6WIMHwKuGOqJwBmjx98i8nR2A6ArQ/gZu16Pop2fAXkg44lBfMKAsAAAAASUVORK5CYII=" style="width:32px;">&nbsp&nbsp&nbsp&nbspReunion</a></li>
+                                    <li><a href="comores.html"><img src="data:image/png;base64,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" style="width:32px;">&nbsp&nbsp&nbsp&nbspComores</a></li>
+                                    <li><a href="mayotte.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABlElEQVRoQ+3bv07CUBTH8d/BQYluYpx8D0cXWxYHTZCS+DcODj6MM5oIiQ6WKiRO+gY8isS4OACLHENDSUUlnFiGm/yYCFxK7iffnulWkHr5lUYRAz2HYBPAOgBJf29936ztWn8y8/r+0cXMa6csVEA7AmkrctXVqPqcrI03vnVSW1rs5+uAlLP4t+QaDsBMbFfCLpZPN6LLXgzjBeGtAAdZogyv5R4MoCp3hYerQ9ku33s5kZesUVyFiR1UfPGDxiOge4T5JtASPwjfABQIkxbQ1yGMzgPF6VsJGBDmjyoIQxjbwGAxLIbF2ARYjM2LM4bFsBibAIuxeXHGsBgWYxNgMTYvzhgWw2JsAizG5sUZw2JYjE2Axdi8OGNYDIuxCbAYmxdnDIthMTYBFmPz4oxhMSzGJjClGJ7B+4Gj7+IFYVOAuRzhdvGc78ioxXO+v91KgiJPhk/AjE+GDz8vlRr5jwWtA9jPZHKNLuLcrSSIurpyPH6WIMHwKuGOqJwBmjx98i8nR2A6ArQ/gZu16Pop2fAXkg44lBfMKAsAAAAASUVORK5CYII=" style="width:32px;">&nbsp&nbsp&nbsp&nbspMayotte</a></li>
+                                    <li><a href="madagascar.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABnUlEQVRoQ+2bvUoDQRSFz42NYmnAyvfIE6iNhRaRgFHUQsSHSR3BIJgismrQSt8gj2IQG8kmQxb2yq4uRCGQG7OakTPVws7+zDffnOpewcjouWhTgBNoXAJkFYCM3p/m2u2fTfPYbz2jgHYF0lEU6itB/TH7cLpwVV0MXXQpwO6s/2jOwXxbrlz3sXy4FtQGKZj+YHilwN6soSTv8wtMIok0izfnVem5aF1Un/KA4iOYlIPKhoQuuoXqDsF8IdCWcDB8AVAkmFEC+pyA0bygeHuUgJhgxlhBMARjCwwaQ2NojI0AjbHxYsbQGBpjI0BjbLyYMTSGxtgI0BgbL2bMXxlzdH9q26o5mZ27MQQzZqcJhmBsIUBjaAyNsRGgMTZezBgaQ2NsBGiMjRczhsbQGBsBGmPjxYz5h8bkWoPnozGieE2qNu+gum07IJPP9hGMirRzr/P1E0whaR3ItzLcNzCiaLYqF9Wsl2Dps5egPPkhmWymZ2CCuPB2EJSDj16CbITObSFeOIZoCUDSffLj4QGYLoCOqDZalcZDtuB3O39A7ndCGUQAAAAASUVORK5CYII=" style="width:32px;">&nbsp&nbsp&nbsp&nbspMadagascar</a></li>
+                                     <li><a href="rodrigues.html"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEYAAAAvCAYAAABe1bwWAAABrElEQVRoQ+2bwUrDQBRF76sgiqALC678j35B240LpUlasFiNtp/juoKl0IKJUQuu9A/6BW7dWjQbwbqyTxopFEmQyXK8swokE7gnZ95kYEaw1GKnUxXMOgotAbIDQJbvW3itgE4EMlYUuttR92GRMQn+3GqtbX6s9gH1LAxvEEnCKTaOd6PzzwTMW609ENFDgzdY+6iqDIs3F02Ja+0yRB+tTZonmEpFYqd9C+hBnv4W9xlJ7Jy9AihaHDJHNH2Zg9EcPW3vMiOYjE9MMARjNvppDI0xNKZSDzkrpTATgkk3iWCyagyNoTFG1ZdDiUPJSBjQGBpDY8wI0BgzXqwxWcZMn1pcK6WtlQgm48+XYAjGqPoKjaExNMaIAKdrM1ysMTSGxpgRoDFmvMQLfK6V0tZKBJPxg0cwBGNUZFhjsmYlL/C5B+8XHFHE4oand6K6b+SZ5Q+ryEi84KQMCPf5Ln1slUI12Rlev/IHKuDO8PnhCcUwaFw2EzDOtbO+8rXVV1HX8lHyV7xoVng/itzo5yzBormhvycKH0AJwPz0yX9oEwBjUe0Fjd79IvA3Q5C0KPG4+sIAAAAASUVORK5CYII=" style="width:32px;">&nbsp&nbsp&nbsp&nbspRodrigues</a></li>
+                            </li>
+                            <li><a href="about/aboutus.html" class="md-info">About</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header id="cm-header">
+            <nav class="cm-navbar cm-navbar-primary">
+                <div class="btn btn-primary md-menu-white hidden-md hidden-lg" data-toggle="cm-menu"></div>
+                <div class="cm-flex">
+                </div>
+                <div class="dropdown pull-right">
+                    <button class="btn btn-primary md-account-circle-white" data-toggle="dropdown"></button>
+                    <ul class="dropdown-menu">
+                        <li class="disabled text-center">
+                            <a style="cursor:default;"><strong>John Smith</strong></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-cog"></i> Settings</a>
+                        </li>
+                        <li>
+                            <a href="login.html"><i class="fa fa-fw fa-sign-out"></i> Sign out</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div id="global">
+            <div class="container-fluid" style="font-family: 'Orbitron', sans-serif;">
+                <div class="row cm-fix-height">
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <span class="container">                                       
+                                    <div class="row">
+                                        <div class="temperaturesChart">
+                                           <canvas id="myChart"></canvas>
+                                        </div>
+                                    </div>                                           
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <span class="container">                                       
+                                    <div class="row">
+                                        <script type="text/javascript" src="charts/madagascar/js/pressionArterielle.js"></script>
+                                        <div class="pressionArterielle">
+                                        <canvas id="myChart2"></canvas>
+                                        </div>
+                                    </div>                                           
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <span class="container">                                       
+                                    <div class="row">
+                                        <script type="text/javascript" src="charts/madagascar/js/pulsations.js"></script>
+                                        <div class="pulsations">
+                                        <canvas id="myChart3"></canvas>
+                                        </div>
+                                    </div>                                           
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="cm-footer"><span class="pull-right">&copy; LUNA LAB</span></footer>
+        </div>
+        <script src="assets/js/jquery.mousewheel.min.js"></script>
+        <script src="assets/js/jquery.cookie.min.js"></script>
+        <script src="assets/js/fastclick.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/clearmin.min.js"></script>
+    </body>
+</html>
